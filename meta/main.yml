@@ -1,0 +1,17 @@
+galaxy_info:
+  author: Jake Morgan
+  description: Hardens an Ubuntu Focal Fossa instancee
+  license: MIT
+  min_ansible_version: 2.9
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - focal
+
+  galaxy_tags:
+    - system
+    - hardening
+    - security
+
+dependencies: []
