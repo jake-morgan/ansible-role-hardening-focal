@@ -1,7 +1,7 @@
 galaxy_info:
   role_name: hardening_focal
   author: Jake Morgan
-  description: Hardens an Ubuntu Focal Fossa instance
+  description: Hardens Ubuntu 20.04 LTS (Focal Fossa)
   license: MIT
   min_ansible_version: 2.9
 
