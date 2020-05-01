@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: hardening_focal
   author: Jake Morgan
   description: Hardens an Ubuntu Focal Fossa instancee
   license: MIT

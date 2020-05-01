@@ -1,38 +1,41 @@
-Role Name
+Hardening Focal Fossa
 =========
 
-A brief description of the role goes here.
+![master](https://github.com/jake-morgan/ansible-role-hardening-focal/workflows/master/badge.svg)
+[![galaxy](https://img.shields.io/badge/galaxy-jake__morgan.hardening__focal-5bbdbf.svg)](https://galaxy.ansible.com/jake_morgan/hardening_focal)
+
+Harden Ubuntu 20.04 LTS (Focal Fossa) to guidelines laid out in:
+
+* [Linode Secure Your Server](https://www.linode.com/docs/security/securing-your-server/)
+* [Rackspace Linux Security Best Practices](https://support.rackspace.com/how-to/linux-server-security-best-practices/)
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Tested only on Ubuntu 20.04 LTS Focal Fossa. No guarantee it will work on other distros or Ubuntu versions.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+| Variable | Description | Type| Required | Default |
+|-|-|-|-|-|
+| `var_name` | Description... | Bool/String/Number | Yes/No | `value` |
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+None.
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+```yaml
+- hosts: all
+  roles:
+    - role: jake-morgan.hardening-focal
+```
 
 License
 -------
 
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+MIT
