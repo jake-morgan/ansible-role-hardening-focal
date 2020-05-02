@@ -1,2 +1,6 @@
 ---
 - include: unattended_upgrades.yml
+
+- include: ssh_options.yml
+
+- include: fail2ban.yml

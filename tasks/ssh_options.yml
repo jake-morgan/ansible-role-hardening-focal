@@ -1,0 +1,24 @@
+---
+- name: Remove any PermitRootLogin reference in sshd_config
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: "^PermitRootLogin yes"
+    state: absent
+
+- name: Disable root SSH login
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    line: PermitRootLogin no
+  notify: restart sshd
+
+- name: Remove any PermitRootLogin reference in sshd_config
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: "^PasswordAuthentication yes"
+    state: absent
+
+- name: Disable root SSH login
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    line: PasswordAuthentication no
+  notify: restart sshd
