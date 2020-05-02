@@ -4,3 +4,5 @@
 - include: ssh_options.yml
 
 - include: fail2ban.yml
+
+- include: ufw.yml

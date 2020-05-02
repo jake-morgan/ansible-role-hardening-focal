@@ -1,0 +1,32 @@
+---
+- name: Install UFW
+  apt:
+    name: ufw
+    state: present
+    update_cache: yes
+
+- name: Allow SSH traffic
+  ufw:
+    port: ssh
+    rule: allow
+    proto: tcp
+
+- name: Allow HTTP traffic
+  ufw:
+    port: http
+    rule: allow
+    proto: tcp
+
+- name: Allow HTTPS traffic
+  ufw:
+    port: https
+    rule: allow
+    proto: tcp
+
+- name: Set default UFW to deny
+  ufw:
+    default: deny
+
+- name: Enable UFW
+  ufw:
+    state: enabled
